@@ -26,7 +26,7 @@ RUN mkdir -p /usr/local/bin
 
 # On extrait le binaire Libra contenu dans l'archive
 # et on le place directement dans le répertoire /usr/local/bin
-RUN tar -xzf libra.tar.gz -C /usr/local/bin libra
+RUN tar -xzf libra.tar.gz -C /usr/local/bin libra && rm libra.tar.gz
 
 # On s'assure que le binaire est exécutable
 RUN chmod +x /usr/local/bin/libra
